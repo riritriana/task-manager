@@ -1,0 +1,10 @@
+
+
+body {
+    margin: 0; 
+    background-color: #f4f4f4; /* Tambahkan background agar container Anda terlihat */
+}
+/* Pastikan elemen root mengambil tinggi penuh */
+#root {
+    min-height: 100vh;
+}
