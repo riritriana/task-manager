@@ -3,11 +3,14 @@ import pkg from 'pg';
 const { Pool } = pkg;
 
 const pool = new Pool({
-    user: 'postgres',       
-    host: 'localhost',
-    database: 'task_manager_db',
-    password: '12345678', 
-    port: 5432, 
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT || 5432,
+  ssl: {
+    rejectUnauthorized: false // Wajib ditambahkan untuk koneksi ke database cloud
+  }
 });
 
 // Wrapper untuk menjalankan query
