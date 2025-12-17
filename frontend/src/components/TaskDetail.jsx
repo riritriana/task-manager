@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3001/tasks';
+const API_URL = 'https://task-manager-apii.vercel.app/tasks';
 
 export default function TaskDetail() {
     const { id } = useParams(); // Ambil parameter 'id' dari URL
